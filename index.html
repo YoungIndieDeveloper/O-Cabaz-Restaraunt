@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Cabaz — Authentic Portuguese Cuisine, Bakery &amp; Coffee | Thetford</title>
+<meta name="description" content="O Cabaz — authentic Portuguese restaurant, bakery and café in Thetford. Fresh coffee, pastries, grilled plates and Portuguese wines. 2 Earls' St, Thetford IP24 2AD. Call +44 1842 824252.">
+<meta name="theme-color" content="#C85A32">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C85A32'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3EO%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   O CABAZ — DESIGN TOKENS
+   Change brand colours here and they update across the whole site.
+   ============================================================ */
+:root{
+  /* Brand palette */
+  --terracotta:#C85A32;
+  --terracotta-dark:#A8461F;
+  --terracotta-soft:#FBEDE6;
+  --slate:#2C3E50;
+  --slate-dark:#1E2B38;
+  --gold:#D4AF37;
+  --gold-soft:#F7EFD6;
+  --bg:#F9F8F6;
+
+  /* Neutrals */
+  --white:#ffffff;
+  --ink:#2C3E50;
+  --muted:#78848F;
+  --line:rgba(44,62,80,.10);
+  --line-strong:rgba(44,62,80,.16);
+
+  /* Shadows */
+  --shadow-sm:0 1px 2px rgba(44,62,80,.04), 0 6px 18px rgba(44,62,80,.05);
+  --shadow-md:0 16px 40px rgba(44,62,80,.11);
+  --shadow-lg:0 26px 60px rgba(30,43,56,.22);
+
+  /* Shape */
+  --radius:18px;
+  --radius-lg:24px;
+  --max:1140px;
+
+  /* Type */
+  --font-sans:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+
+  /* Portuguese azulejo tile motif (used as a subtle background texture) */
+  --azulejo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.1'%3E%3Cg transform='translate(45,45)'%3E%3Cpath d='M0 -30 C11 -19 11 -9 0 0 C-11 -9 -11 -19 0 -30 Z'/%3E%3Cpath d='M0 -30 C11 -19 11 -9 0 0 C-11 -9 -11 -19 0 -30 Z' transform='rotate(90)'/%3E%3Cpath d='M0 -30 C11 -19 11 -9 0 0 C-11 -9 -11 -19 0 -30 Z' transform='rotate(180)'/%3E%3Cpath d='M0 -30 C11 -19 11 -9 0 0 C-11 -9 -11 -19 0 -30 Z' transform='rotate(270)'/%3E%3Ccircle r='5'/%3E%3C/g%3E%3Ccircle cx='0' cy='0' r='3.4'/%3E%3Ccircle cx='90' cy='0' r='3.4'/%3E%3Ccircle cx='0' cy='90' r='3.4'/%3E%3Ccircle cx='90' cy='90' r='3.4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   BASE / RESET
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:600;line-height:1.14;letter-spacing:-.018em;color:var(--slate)}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+::selection{background:var(--terracotta);color:#fff}
+:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+.container{width:min(100% - 40px, var(--max));margin-inline:auto}
+@media (max-width:520px){.container{width:min(100% - 28px, var(--max))}}
+
+.section{padding:clamp(62px,9vw,106px) 0;scroll-margin-top:86px}
+.section-head{max-width:660px;margin-bottom:clamp(30px,5vw,50px)}
+.section-head.center{margin-inline:auto;text-align:center}
+.section-title{font-size:clamp(1.85rem,4.4vw,2.7rem)}
+.section-lead{margin-top:16px;color:var(--muted);font-size:clamp(.96rem,1.6vw,1.05rem);line-height:1.72}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--terracotta);margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--terracotta),var(--gold))}
+.section-head.center .eyebrow::after{content:"";width:24px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--terracotta))}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 26px;border-radius:999px;border:1.5px solid transparent;
+  font-weight:700;font-size:.93rem;letter-spacing:.005em;white-space:nowrap;
+  transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,
+             background-color .28s ease,color .28s ease,border-color .28s ease;
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 10px 24px rgba(200,90,50,.28)}
+.btn-primary:hover{background:var(--terracotta-dark);transform:translateY(-2px);box-shadow:0 16px 30px rgba(200,90,50,.34)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.38);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:#fff;color:var(--slate);border-color:#fff;transform:translateY(-2px)}
+.btn-dark{background:var(--slate);color:#fff;box-shadow:0 10px 24px rgba(44,62,80,.2)}
+.btn-dark:hover{background:var(--slate-dark);transform:translateY(-2px);box-shadow:0 16px 30px rgba(44,62,80,.26)}
+.btn-block{width:100%}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:120;
+  background:rgba(249,248,246,.84);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border-bottom:1px solid transparent;
+  transition:box-shadow .35s ease,border-color .35s ease,background-color .35s ease;
+}
+.nav.scrolled{
+  background:rgba(249,248,246,.96);
+  border-bottom-color:var(--line);
+  box-shadow:0 10px 34px rgba(44,62,80,.07);
+}
+.nav-inner{display:flex;align-items:center;gap:16px;height:74px}
+
+.logo{display:flex;align-items:center;gap:11px;margin-right:auto;min-width:0}
+.logo-mark{
+  width:41px;height:41px;flex:none;border-radius:13px;
+  background:linear-gradient(145deg,#D96A40,var(--terracotta-dark));
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 7px 18px rgba(200,90,50,.32);
+  transition:transform .35s cubic-bezier(.2,.7,.3,1);
+}
+.logo:hover .logo-mark{transform:rotate(-7deg) scale(1.05)}
+.logo-mark svg{width:21px;height:21px}
+.logo-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+.logo-text b{font-family:var(--font-display);font-weight:700;font-size:1.28rem;line-height:1;letter-spacing:-.025em;color:var(--slate)}
+.logo-text small{font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{
+  position:relative;padding:9px 15px;border-radius:999px;
+  font-size:.92rem;font-weight:600;color:#5A6570;
+  transition:color .22s ease,background-color .22s ease;
+}
+.nav-links a:hover{color:var(--terracotta);background:rgba(200,90,50,.07)}
+.nav-links a.is-active{color:var(--terracotta)}
+.nav-links a.is-active::after{
+  content:"";position:absolute;left:50%;bottom:3px;transform:translateX(-50%);
+  width:15px;height:2px;border-radius:2px;background:var(--gold);
+}
+.nav-cta{padding:12px 22px;font-size:.88rem}
+
+.hamburger{
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:4.5px;
+  width:44px;height:44px;flex:none;border-radius:13px;
+  background:#fff;border:1px solid var(--line);
+  transition:background-color .25s ease,border-color .25s ease;
+}
+.hamburger:hover{border-color:rgba(200,90,50,.35)}
+.hamburger span{width:17px;height:1.9px;border-radius:2px;background:var(--slate);transition:transform .3s ease,opacity .25s ease}
+.hamburger.is-open span:nth-child(1){transform:translateY(6.4px) rotate(45deg)}
+.hamburger.is-open span:nth-child(2){opacity:0}
+.hamburger.is-open span:nth-child(3){transform:translateY(-6.4px) rotate(-45deg)}
+
+.mobile-menu{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1);border-top:1px solid transparent}
+.mobile-menu.open{max-height:440px;border-top-color:var(--line);background:rgba(249,248,246,.99)}
+.mobile-menu a.m-link{
+  display:block;padding:15px 2px;font-weight:600;font-size:1rem;
+  border-bottom:1px solid var(--line);color:var(--slate);
+  transition:color .2s ease,padding-left .25s ease;
+}
+.mobile-menu a.m-link:hover{color:var(--terracotta);padding-left:8px}
+.mobile-menu .btn{margin:20px 0 24px}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  padding:clamp(74px,11vw,122px) 0 clamp(82px,11vw,126px);
+  background:
+    radial-gradient(880px 520px at 12% 8%, rgba(200,90,50,.46), transparent 62%),
+    radial-gradient(720px 500px at 90% 92%, rgba(212,175,55,.22), transparent 64%),
+    linear-gradient(158deg,#1E2B38 0%,#2C3E50 46%,#16212B 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:var(--azulejo);background-size:90px 90px;
+  opacity:.15;
+  -webkit-mask-image:radial-gradient(circle at 50% 42%, #000 8%, transparent 76%);
+  mask-image:radial-gradient(circle at 50% 42%, #000 8%, transparent 76%);
+}
+.hero .container{position:relative;z-index:2}
+.hero-inner{max-width:860px;margin-inline:auto;text-align:center}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:8px 18px;border-radius:999px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  color:#F1DFA8;font-size:.7rem;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(212,175,55,.2)}
+
+.hero h1{
+  margin-top:26px;
+  font-size:clamp(2.3rem,6.6vw,4.2rem);
+  font-weight:600;letter-spacing:-.032em;line-height:1.06;color:#fff;
+}
+.hero h1 .accent{
+  font-style:italic;font-weight:600;
+  background:linear-gradient(100deg,#EBD07A,var(--gold) 55%,#EBD07A);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{
+  max-width:640px;margin:22px auto 0;
+  color:rgba(255,255,255,.77);
+  font-size:clamp(.98rem,2.1vw,1.11rem);line-height:1.72;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:13px;flex-wrap:wrap;justify-content:center;
+  margin-top:38px;padding:11px 20px;border-radius:999px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  color:rgba(255,255,255,.86);font-size:.83rem;font-weight:600;
+}
+.stars{display:inline-flex;gap:2px;color:var(--gold)}
+.stars svg{width:15px;height:15px}
+.hero-badge .sep{width:1px;height:16px;background:rgba(255,255,255,.2)}
+.hero-badge .live{
+  display:inline-flex;align-items:center;gap:7px;
+  color:#8FE0AE;font-weight:700;font-size:.78rem;letter-spacing:.02em;
+}
+.hero-badge .live .pulse{
+  width:7px;height:7px;border-radius:50%;background:#5ED48C;
+  box-shadow:0 0 0 0 rgba(94,212,140,.6);animation:pulse 2.2s infinite;
+}
+.hero-badge .live.closed{color:#F0A9A0}
+.hero-badge .live.closed .pulse{background:#E5766A;box-shadow:none;animation:none}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(94,212,140,.55)}
+  70%{box-shadow:0 0 0 9px rgba(94,212,140,0)}
+  100%{box-shadow:0 0 0 0 rgba(94,212,140,0)}
+}
+
+/* ============================================================
+   HIGHLIGHTS
+   ============================================================ */
+.features{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));
+  gap:20px;
+}
+.feature{
+  position:relative;overflow:hidden;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 26px;box-shadow:var(--shadow-sm);
+  transition:transform .32s cubic-bezier(.2,.7,.3,1),box-shadow .32s ease,border-color .32s ease;
+}
+.feature::after{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--terracotta),var(--gold));
+  opacity:0;transition:opacity .32s ease;
+}
+.feature:hover{transform:translateY(-7px);box-shadow:var(--shadow-md);border-color:rgba(200,90,50,.2)}
+.feature:hover::after{opacity:1}
+.feature-icon{
+  width:52px;height:52px;border-radius:15px;display:grid;place-items:center;
+  background:var(--terracotta-soft);color:var(--terracotta);margin-bottom:20px;
+  transition:background-color .32s ease,color .32s ease,transform .32s cubic-bezier(.2,.7,.3,1);
+}
+.feature-icon svg{width:23px;height:23px}
+.feature:hover .feature-icon{background:var(--terracotta);color:#fff;transform:rotate(-5deg) scale(1.04)}
+.feature h3{font-size:1.09rem;margin-bottom:9px;letter-spacing:-.015em}
+.feature p{color:var(--muted);font-size:.91rem;line-height:1.65}
+
+/* ============================================================
+   MENU — TABS
+   ============================================================ */
+.menu-section{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+.menu-tabs-wrap{
+  position:relative;
+  margin-bottom:clamp(28px,4vw,42px);
+  /* Horizontal scroll on narrow screens */
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  padding:4px 2px;
+}
+.menu-tabs-wrap::-webkit-scrollbar{display:none}
+.menu-tabs{
+  display:flex;gap:9px;justify-content:center;
+  min-width:max-content;margin-inline:auto;padding:0 2px;
+}
+@media (max-width:760px){
+  .menu-tabs{justify-content:flex-start}
+}
+
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:1px;
+  padding:11px 20px;border-radius:14px;
+  background:var(--bg);border:1px solid var(--line);
+  box-shadow:0 1px 2px rgba(44,62,80,.03);
+  transition:transform .25s cubic-bezier(.2,.7,.3,1),background-color .25s ease,
+             color .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.tab .tab-pt{font-size:.86rem;font-weight:800;letter-spacing:-.01em;line-height:1.25;white-space:nowrap}
+.tab .tab-en{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.62;white-space:nowrap}
+.tab:hover{transform:translateY(-2px);border-color:rgba(200,90,50,.35);color:var(--terracotta);background:#fff}
+.tab.is-active{
+  background:var(--terracotta);border-color:var(--terracotta);color:#fff;
+  box-shadow:0 12px 24px rgba(200,90,50,.26);
+}
+.tab.is-active .tab-en{opacity:.85}
+
+/* ============================================================
+   MENU — PANELS & CARDS
+   ============================================================ */
+.menu-panel{display:none}
+.menu-panel.is-active{display:block;animation:panelIn .45s cubic-bezier(.2,.7,.3,1) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.panel-head{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.panel-head h3{font-size:1.32rem;letter-spacing:-.02em}
+.panel-head .panel-en{
+  font-size:.68rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);
+}
+.panel-head .panel-count{margin-left:auto;font-size:.76rem;font-weight:600;color:var(--muted)}
+
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+
+.menu-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px 18px;box-shadow:var(--shadow-sm);
+  transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s ease,border-color .3s ease;
+}
+.menu-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:rgba(212,175,55,.55)}
+
+.menu-card-top{display:flex;align-items:baseline;gap:10px;justify-content:space-between}
+.menu-card .item-name{
+  font-family:var(--font-sans);font-weight:700;font-size:.98rem;
+  letter-spacing:-.012em;line-height:1.4;color:var(--slate);
+}
+.menu-card .dots{
+  flex:1;min-width:14px;height:0;
+  border-bottom:1.5px dotted rgba(44,62,80,.22);
+  transform:translateY(-4px);
+  transition:border-color .3s ease;
+}
+.menu-card:hover .dots{border-bottom-color:rgba(200,90,50,.42)}
+.menu-card .item-price{
+  font-family:var(--font-display);font-weight:700;font-size:1.06rem;
+  color:var(--terracotta);white-space:nowrap;flex:none;letter-spacing:-.01em;
+}
+.menu-card .item-price.is-daily{color:var(--gold);font-size:.86rem;font-family:var(--font-sans);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.menu-card .item-desc{margin-top:8px;color:var(--muted);font-size:.875rem;line-height:1.62}
+
+.menu-note{
+  margin-top:28px;text-align:center;color:var(--muted);font-size:.83rem;
+  display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;
+}
+.menu-note svg{width:15px;height:15px;color:var(--gold);flex:none}
+.menu-noscript{
+  padding:20px;border-radius:14px;background:var(--terracotta-soft);
+  border:1px solid rgba(200,90,50,.2);color:var(--terracotta-dark);
+  font-size:.9rem;text-align:center;font-weight:600;
+}
+
+/* ============================================================
+   HOURS & LOCATION
+   ============================================================ */
+.hours-section{
+  position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(158deg,#1E2B38 0%,#2C3E50 52%,#17222D 100%);
+}
+.hours-section::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:var(--azulejo);background-size:90px 90px;opacity:.09;
+  -webkit-mask-image:radial-gradient(circle at 80% 20%, #000, transparent 70%);
+  mask-image:radial-gradient(circle at 80% 20%, #000, transparent 70%);
+}
+.hours-section .container{position:relative;z-index:2}
+.hours-section .section-title{color:#fff}
+.hours-section .section-lead{color:rgba(255,255,255,.66)}
+.hours-section .eyebrow{color:var(--gold)}
+.hours-section .eyebrow::before{background:linear-gradient(90deg,var(--gold),var(--terracotta))}
+.hours-section .section-head.center .eyebrow::after{background:linear-gradient(90deg,var(--terracotta),var(--gold))}
+
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.info-card{
+  background:#fff;border-radius:var(--radius-lg);padding:clamp(24px,3.6vw,34px);
+  box-shadow:var(--shadow-lg);
+}
+.info-card h3{
+  font-size:1.16rem;margin-bottom:6px;
+  display:flex;align-items:center;gap:11px;
+}
+.info-card h3 .ic{
+  width:36px;height:36px;flex:none;border-radius:11px;display:grid;place-items:center;
+  background:var(--terracotta-soft);color:var(--terracotta);
+}
+.info-card h3 .ic svg{width:18px;height:18px}
+.info-card .sub{color:var(--muted);font-size:.85rem;margin-bottom:18px;margin-left:47px}
+
+.hours-list li{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:11px 14px;border-radius:11px;font-size:.92rem;
+  transition:background-color .22s ease;
+}
+.hours-list li + li{margin-top:2px}
+.hours-list .day{font-weight:600;color:var(--slate);display:flex;align-items:center;gap:9px}
+.hours-list .time{font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.hours-list li:hover{background:#FBF7F3}
+.hours-list li.today{background:var(--terracotta-soft)}
+.hours-list li.today .day,.hours-list li.today .time{color:var(--terracotta-dark)}
+.hours-list li.today .day::after{
+  content:"Today";padding:3px 8px;border-radius:999px;
+  font-size:.56rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;
+  background:var(--terracotta);color:#fff;
+}
+
+.address{font-size:.95rem;line-height:1.75;color:#4A5763}
+.address strong{display:block;color:var(--slate);font-weight:700;margin-bottom:4px}
+.contact-lines{margin-top:20px;display:grid;gap:10px}
+.contact-line{
+  display:flex;align-items:center;gap:12px;
+  padding:13px 16px;border-radius:13px;background:#FBF7F3;
+  border:1px solid var(--line);font-size:.9rem;font-weight:600;color:var(--slate);
+  transition:background-color .25s ease,border-color .25s ease,transform .25s ease;
+}
+.contact-line:hover{background:#fff;border-color:rgba(200,90,50,.32);transform:translateX(3px)}
+.contact-line svg{width:17px;height:17px;color:var(--terracotta);flex:none}
+.contact-line small{display:block;font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.02em}
+
+.hours-note{
+  margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:.8rem;color:var(--muted);display:flex;gap:9px;align-items:flex-start;
+}
+.hours-note svg{width:15px;height:15px;color:var(--gold);flex:none;margin-top:2px}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:#17222D;color:rgba(255,255,255,.6);padding:clamp(48px,6vw,68px) 0 26px;font-size:.89rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:clamp(26px,4vw,44px);padding-bottom:38px;
+}
+.footer .logo-text b{color:#fff}
+.footer .logo-text small{color:rgba(255,255,255,.45)}
+.footer .logo{margin-bottom:18px}
+.footer p{line-height:1.75;max-width:34ch}
+.footer h4{
+  font-family:var(--font-sans);font-size:.68rem;font-weight:800;
+  letter-spacing:.17em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);margin-bottom:15px;
+}
+.footer a{transition:color .22s ease}
+.footer a:hover{color:#fff}
+.footer-links li + li{margin-top:9px}
+.footer-links a{display:inline-flex;align-items:center;gap:8px}
+.footer-links a::before{
+  content:"";width:4px;height:4px;border-radius:50%;background:var(--gold);
+  opacity:.6;transition:opacity .22s ease;
+}
+.footer-links a:hover::before{opacity:1}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.09);
+  padding-top:22px;display:flex;justify-content:space-between;
+  align-items:center;gap:14px;flex-wrap:wrap;
+  font-size:.79rem;color:rgba(255,255,255,.42);
+}
+.footer-bottom .dev{color:rgba(255,255,255,.36)}
+.footer-bottom .dev a{color:var(--gold);font-weight:600}
+.footer-bottom .dev a:hover{color:#EBD07A}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:980px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer p{max-width:none}
+}
+@media (max-width:880px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .hamburger{display:flex}
+  .info-grid{grid-template-columns:1fr}
+  .nav-inner{height:68px}
+}
+@media (min-width:881px){
+  .mobile-menu{display:none !important}
+}
+@media (max-width:600px){
+  .menu-grid{grid-template-columns:1fr}
+  .hero-actions .btn{flex:1 1 100%}
+  .hero-badge{gap:10px;font-size:.78rem;padding:11px 16px}
+  .hero-badge .sep{display:none}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .info-card{border-radius:18px}
+  .footer-bottom{justify-content:flex-start}
+  .panel-head .panel-count{display:none}
+}
+@media (max-width:380px){
+  .logo-text small{display:none}
+  .tab{padding:10px 15px}
+}
+
+/* ============================================================
+   ACCESSIBILITY — REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;scroll-behavior:auto !important;
+  }
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body id="top">
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo" aria-label="O Cabaz — home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3.5 9.5h17l-1.6 9.2a2.4 2.4 0 0 1-2.36 1.98H7.46A2.4 2.4 0 0 1 5.1 18.7L3.5 9.5Z"/>
+          <path d="M8.4 9.5 10.6 4M15.6 9.5 13.4 4"/>
+          <path d="M9 13.4v3.4M12 13.4v3.4M15 13.4v3.4"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <b>O Cabaz</b>
+        <small>Restaurante · Café · Bar</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#hours">Hours</a>
+    </nav>
+
+    <a href="tel:+441842824252" class="btn btn-primary nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6.6 3.5h2.2l1.6 4-2 1.3a12 12 0 0 0 5.3 5.3l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/>
+      </svg>
+      Call Now
+    </a>
+
+    <button class="hamburger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="container">
+      <a class="m-link" href="#menu">Menu</a>
+      <a class="m-link" href="#about">About</a>
+      <a class="m-link" href="#hours">Hours &amp; Location</a>
+      <a class="btn btn-primary btn-block" href="tel:+441842824252">Call +44 1842 824252</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="Welcome to O Cabaz">
+  <div class="container">
+    <div class="hero-inner">
+
+      <span class="hero-eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        Thetford · IP24 2AD
+      </span>
+
+      <h1>Taste of <span class="accent">Portugal</span>,<br>Right Here in Thetford.</h1>
+
+      <p class="hero-sub">
+        Fresh coffee, warm pastries from the oven and proper Portuguese plates —
+        served with the unhurried, generous hospitality of a family-run tasca.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 4h14M5 9h14M5 14h9M5 19h6"/>
+          </svg>
+          Explore Menu
+        </a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=O%20Cabaz%202%20Earls%27%20St%20Thetford%20IP24%202AD" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/>
+            <circle cx="12" cy="10" r="2.6"/>
+          </svg>
+          Get Directions
+        </a>
+      </div>
+
+      <div class="hero-badge">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5-4.8-4.6 6.6-.9Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5-4.8-4.6 6.6-.9Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5-4.8-4.6 6.6-.9Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5-4.8-4.6 6.6-.9Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="opacity:.45"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5-4.8-4.6 6.6-.9Z"/></svg>
+        </span>
+        <span><strong style="color:#fff">4.5</strong> · 200+ Google reviews</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="live" id="openStatus">
+          <span class="pulse" aria-hidden="true"></span>
+          <span id="openStatusText">Open today</span>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT + HIGHLIGHTS
+     ============================================================ -->
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2 class="section-title">A little corner of Portugal on Earls' Street.</h2>
+      <p class="section-lead">
+        <strong style="color:var(--slate)">O Cabaz</strong> — “the basket” — is a family-run
+        restaurant, bakery and café in the heart of Thetford. We bake fresh every morning,
+        pull proper Portuguese espresso, and grill the plates we grew up with.
+      </p>
+    </div>
+
+    <div class="features">
+
+      <article class="feature reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 8.5h12v4.6a4.5 4.5 0 0 1-4.5 4.5h-3A4.5 4.5 0 0 1 4 13.1V8.5Z"/>
+            <path d="M16 9.6h1.6a2.4 2.4 0 0 1 0 4.8H16"/>
+            <path d="M7.4 3.2c0 .9-.9 1.3-.9 2.2M11 3.2c0 .9-.9 1.3-.9 2.2"/>
+          </svg>
+        </span>
+        <h3>Fresh Coffee &amp; Bakery</h3>
+        <p>Portuguese-roasted espresso, pastéis de nata and cakes baked in-house every single morning.</p>
+      </article>
+
+      <article class="feature reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 8h14l-1.3 11.1a2 2 0 0 1-2 1.8H8.3a2 2 0 0 1-2-1.8L5 8Z"/>
+            <path d="M9 8V6.4a3 3 0 0 1 6 0V8"/>
+          </svg>
+        </span>
+        <h3>Dine-In or Takeaway</h3>
+        <p>Settle into our cosy dining room, or grab your order to go — packed fresh and ready when you are.</p>
+      </article>
+
+      <article class="feature reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3.5h8l-.7 6a3.4 3.4 0 0 1-6.6 0l-.7-6Z"/>
+            <path d="M12 13.2V20M9 20.5h6"/>
+          </svg>
+        </span>
+        <h3>Portuguese Beers &amp; Wines</h3>
+        <p>Cold Super Bock, crisp Vinho Verde, Douro reds and a proper glass of port to finish.</p>
+      </article>
+
+      <article class="feature reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20.3s-7.3-4.3-7.3-9.3a4.1 4.1 0 0 1 7.3-2.6 4.1 4.1 0 0 1 7.3 2.6c0 5-7.3 9.3-7.3 9.3Z"/>
+          </svg>
+        </span>
+        <h3>Friendly Local Atmosphere</h3>
+        <p>Family-run, unpretentious and genuinely warm. Regulars are made here, not born.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MENU — rendered dynamically from `menuData` (see script)
+     ============================================================ -->
+<section class="section menu-section" id="menu">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our Menu</span>
+      <h2 class="section-title">Freshly made, every day.</h2>
+      <p class="section-lead">
+        From a quick bica and a warm pastry to generous grilled plates —
+        here's a taste of what's waiting for you.
+      </p>
+    </div>
+
+    <!-- Tabs are injected here by renderMenu() -->
+    <div class="menu-tabs-wrap">
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu categories"></div>
+    </div>
+
+    <!-- Panels are injected here by renderMenu() -->
+    <div id="menuPanels"></div>
+
+    <noscript>
+      <p class="menu-noscript">
+        Our full menu is loaded with JavaScript. Please call us on
+        <a href="tel:+441842824252" style="text-decoration:underline">+44 1842 824252</a> and we'll happily talk you through it.
+      </p>
+    </noscript>
+
+    <p class="menu-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.8v.4"/>
+      </svg>
+      Menu changes with the seasons — ask about today's specials. Please tell us about any allergies.
+    </p>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     HOURS & LOCATION
+     ============================================================ -->
+<section class="section hours-section" id="hours">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2 class="section-title">Opening hours &amp; finding us.</h2>
+      <p class="section-lead">Right in the centre of Thetford, a short walk from the market place.</p>
+    </div>
+
+    <div class="info-grid">
+
+      <!-- Opening hours -->
+      <div class="info-card reveal">
+        <h3>
+          <span class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.6 2.1"/>
+            </svg>
+          </span>
+          Opening Hours
+        </h3>
+        <p class="sub">Open seven days a week</p>
+
+        <ul class="hours-list">
+          <li data-day="1"><span class="day">Monday</span><span class="time">8:00 – 22:00</span></li>
+          <li data-day="2"><span class="day">Tuesday</span><span class="time">8:00 – 22:00</span></li>
+          <li data-day="3"><span class="day">Wednesday</span><span class="time">8:00 – 22:00</span></li>
+          <li data-day="4"><span class="day">Thursday</span><span class="time">8:00 – 22:00</span></li>
+          <li data-day="5"><span class="day">Friday</span><span class="time">8:00 – 23:00</span></li>
+          <li data-day="6"><span class="day">Saturday</span><span class="time">8:00 – 23:00</span></li>
+          <li data-day="7"><span class="day">Sunday</span><span class="time">9:00 – 16:00</span></li>
+        </ul>
+
+        <p class="hours-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.8v.4"/>
+          </svg>
+          Kitchen closes 30 minutes before we do. Bank holiday hours may vary — give us a ring to check.
+        </p>
+      </div>
+
+      <!-- Location & contact -->
+      <div class="info-card reveal">
+        <h3>
+          <span class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/>
+            </svg>
+          </span>
+          Find Us
+        </h3>
+        <p class="sub">In the heart of Thetford</p>
+
+        <p class="address">
+          <strong>O Cabaz</strong>
+          2 Earls' St<br>
+          Thetford<br>
+          IP24 2AD, UK
+        </p>
+
+        <div class="contact-lines">
+          <a class="contact-line" href="tel:+441842824252">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6.6 3.5h2.2l1.6 4-2 1.3a12 12 0 0 0 5.3 5.3l1.3-2 4 1.6v2.2a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/>
+            </svg>
+            <span>+44 1842 824252<small>Tap to call us</small></span>
+          </a>
+
+          <a class="contact-line" href="https://www.google.com/maps/search/?api=1&amp;query=O%20Cabaz%202%20Earls%27%20St%20Thetford%20IP24%202AD" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/>
+            </svg>
+            <span>Open in Google Maps<small>Get directions</small></span>
+          </a>
+        </div>
+
+        <a class="btn btn-primary btn-block" style="margin-top:20px"
+           href="https://www.google.com/maps/dir/?api=1&amp;destination=O%20Cabaz%202%20Earls%27%20St%20Thetford%20IP24%202AD"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11.5 21 3l-8.5 18-2-7.5-7.5-2Z"/>
+          </svg>
+          Get Directions
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <a href="#top" class="logo" aria-label="O Cabaz — back to top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3.5 9.5h17l-1.6 9.2a2.4 2.4 0 0 1-2.36 1.98H7.46A2.4 2.4 0 0 1 5.1 18.7L3.5 9.5Z"/>
+              <path d="M8.4 9.5 10.6 4M15.6 9.5 13.4 4"/>
+              <path d="M9 13.4v3.4M12 13.4v3.4M15 13.4v3.4"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            <b>O Cabaz</b>
+            <small>Restaurante · Café · Bar</small>
+          </span>
+        </a>
+        <p>Authentic Portuguese cuisine, fresh pastries and proper coffee in the heart of Thetford.</p>
+      </div>
+
+      <div>
+        <h4>Find us</h4>
+        <p>2 Earls' St<br>Thetford<br>IP24 2AD, UK</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>
+          <a href="tel:+441842824252">+44 1842 824252</a><br>
+          Open 7 days a week
+        </p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#hours">Hours &amp; Location</a></li>
+          <li><a href="tel:+441842824252">Call Now</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 O Cabaz Restaurante. All rights reserved.</p>
+      <p class="dev">Designed &amp; developed by O Cabaz Restaurante</p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+/* ============================================================================
+   O CABAZ — MENU UPDATE ENGINE
+   ============================================================================
+
+   ┌──────────────────────────────────────────────────────────────────────┐
+   │  HOW TO UPDATE THE MENU — READ ME FIRST                              │
+   ├──────────────────────────────────────────────────────────────────────┤
+   │  Everything on the menu lives in the `menuData` array below.         │
+   │                                                                      │
+   │  • To CHANGE A PRICE  → edit the `price` value.                      │
+   │  • To RENAME AN ITEM  → edit the `name` value.                       │
+   │  • To CHANGE THE TEXT → edit the `desc` value.                       │
+   │  • To ADD AN ITEM     → copy any { name, price, desc } block and     │
+   │                         paste it inside the right category.          │
+   │  • To REMOVE AN ITEM  → delete its whole { ... } block.              │
+   │  • To ADD A CATEGORY  → copy a whole { id, label, subtitle,          │
+   │                         items: [ ... ] } block and give it a NEW    │
+   │                         unique `id`.                                 │
+   │                                                                      │
+   │  The tabs and the menu cards are generated automatically — you       │
+   │  never need to touch the HTML. Save the file and refresh.            │
+   └──────────────────────────────────────────────────────────────────────┘
+   ============================================================================ */
+
+const menuData = [
+
+  /* ---------------------------------------------------------------
+     CATEGORY 1 — ENTRADAS (Starters)
+     --------------------------------------------------------------- */
+  {
+    id: 'entradas',                 // unique id — do not duplicate
+    label: 'Entradas',              // Portuguese name (shown big on the tab)
+    subtitle: 'Starters',           // English name (shown small on the tab)
+    items: [
+      {
+        name: 'Pão, Manteiga, Paté de Atum, Paté de Sardinha',
+        price: '£2.10',
+        desc: 'Warm bread with butter, tuna pâté and sardine pâté.'
+      },
+      {
+        name: 'Queijinho Fresco',
+        price: '£3.10',
+        desc: 'Fresh Portuguese cheese, served simply.'
+      },
+      {
+        name: 'Queijinho Curado',
+        price: '£2.20',
+        desc: 'Aged cured cheese — firm, savoury and full of character.'
+      },
+      {
+        name: 'Sopa do Dia',
+        price: 'Daily',              // "Daily" renders as a gold badge instead of a price
+        desc: 'Soup of the day, made fresh in-house. Ask your server.'
+      }
+    ]
+  },
+
+  /* ---------------------------------------------------------------
+     CATEGORY 2 — PRATOS DE CARNE (Meat Dishes)
+     --------------------------------------------------------------- */
+  {
+    id: 'carne',
+    label: 'Pratos de Carne',
+    subtitle: 'Meat',
+    items: [
+      {
+        name: 'Bitoque',
+        price: '£11.00',
+        desc: 'Grilled steak topped with a fried egg, served with rice and fries.'
+      },
+      {
+        name: 'Entremeada',
+        price: '£10.00',
+        desc: 'Grilled pork belly strips — crisp, rich and full of flavour.'
+      },
+      {
+        name: 'Febras Grelhadas',
+        price: '£10.00',
+        desc: 'Grilled pork steaks seasoned with garlic and paprika.'
+      },
+      {
+        name: 'Bifinhos de Frango Grelhados',
+        price: '£10.00',
+        desc: 'Grilled chicken fillets with rice, salad and fries.'
+      },
+      {
+        name: 'Bifinhos de Frango com Cogumelos',
+        price: '£10.50',
+        desc: 'Grilled chicken fillets in a creamy mushroom sauce.'
+      },
+      {
+        name: 'Alheira',
+        price: '£10.00',
+        desc: 'Traditional Portuguese smoked sausage, grilled and served with greens.'
+      },
+      {
+        name: 'Costoleta de Novilho Grelhada',
+        price: '£17.50',
+        desc: 'Grilled beef rib, cooked to your liking.'
+      },
+      {
+        name: 'Picanha',
+        price: '£13.50',
+        desc: 'Grilled rump cap, sliced and served with rice and beans.'
+      },
+      {
+        name: 'Meio Frango Assado com Guarnição',
+        price: '£10.00',
+        desc: 'Half a piri-piri roast chicken with fries and salad.'
+      },
+      {
+        name: 'Frango Assado com Guarnição',
+        price: '£12.50',
+        desc: 'Whole piri-piri roast chicken with fries and salad.'
+      },
+      {
+        name: 'Grelhada Mista',
+        price: '£12.50',
+        desc: 'Mixed grill of meats with rice, fries and salad.'
+      },
+      {
+        name: 'Secretos de Vitela',
+        price: '£11.50',
+        desc: 'Grilled veal secretos — tender, juicy and lightly charred.'
+      },
+      {
+        name: 'Nuggets',
+        price: '£7.50',
+        desc: 'Breaded chicken nuggets served with fries.'
+      }
+    ]
+  },
+
+  /* ---------------------------------------------------------------
+     CATEGORY 3 — PRATOS DE PEIXE (Fish Dishes)
+     --------------------------------------------------------------- */
+  {
+    id: 'peixe',
+    label: 'Pratos de Peixe',
+    subtitle: 'Fish',
+    items: [
+      {
+        name: 'Bacalhau à Lagareiro',
+        price: '£16.50',
+        desc: 'Roast salt cod with crushed potatoes, garlic and olive oil.'
+      },
+      {
+        name: 'Bacalhau à Braga',
+        price: '£16.50',
+        desc: 'Salt cod baked with onions, peppers and sliced potato.'
+      },
+      {
+        name: 'Salmão Grelhado',
+        price: '£12.50',
+        desc: 'Grilled salmon fillet with seasonal vegetables.'
+      },
+      {
+        name: 'Polvo à Lagareiro',
+        price: '£17.00',
+        desc: 'Roast octopus with crushed potatoes and plenty of olive oil.'
+      },
+      {
+        name: 'Omelete',
+        price: '£8.00',
+        desc: 'Portuguese omelette — ask about today\'s fillings.'
+      }
+    ]
+  },
+
+  /* ---------------------------------------------------------------
+     CATEGORY 4 — SOBREMESAS (Desserts)
+     --------------------------------------------------------------- */
+  {
+    id: 'sobremesas',
+    label: 'Sobremesas',
+    subtitle: 'Desserts',
+    items: [
+      {
+        name: 'Fatia de Bolo / Bolacha / Brigadeiro',
+        price: '£2.60',
+        desc: 'Slice of cake, biscuit or brigadeiro — ask for today\'s selection.'
+      },
+      {
+        name: 'Taça...',
+        price: '£2.60',
+        desc: 'Ice cream sundae cup — ask for today\'s flavours.'
+      },
+      {
+        name: 'Pudim',
+        price: '£3.00',
+        desc: 'Traditional Portuguese caramel flan.'
+      }
+    ]
+  },
+
+  /* ---------------------------------------------------------------
+     CATEGORY 5 — BEBIDAS & VINHOS (Drinks & Wines)
+     --------------------------------------------------------------- */
+  {
+    id: 'bebidas',
+    label: 'Bebidas & Vinhos',
+    subtitle: 'Drinks',
+    items: [
+      {
+        name: 'Sumos Lata',
+        price: '£1.30',
+        desc: 'Canned juices.'
+      },
+      {
+        name: 'Cerveja Mini',
+        price: '£1.70',
+        desc: 'Small bottled beer.'
+      },
+      {
+        name: 'Cerveja Média',
+        price: '£2.20',
+        desc: 'Medium bottled beer.'
+      },
+      {
+        name: 'Imperial / Caneca',
+        price: '£2.20 – £3.20',
+        desc: 'Draught beer — small glass or large mug.'
+      },
+      {
+        name: 'Copo de Vinho Tinto / Branco',
+        price: '£2.00',
+        desc: 'Glass of red or white house wine.'
+      },
+      {
+        name: 'Jarro de Vinho',
+        price: '£4.00 – £7.50',
+        desc: 'Jug of house wine — half or full.'
+      },
+      {
+        name: 'Sangria',
+        price: '£2.00 – £10.00',
+        desc: 'Homemade sangria — by the glass or by the jug.'
+      },
+      {
+        name: 'Café',
+        price: '£1.00',
+        desc: 'Portuguese espresso.'
+      }
+    ]
+  }
+
+  /* ---------------------------------------------------------------
+     ADD A NEW CATEGORY HERE — example template:
+
+     ,{
+       id: 'novo',                    // must be unique
+       label: 'Novo Separador',
+       subtitle: 'New Section',
+       items: [
+         { name: 'Item name', price: '£0.00', desc: 'Short description.' }
+       ]
+     }
+
+     --------------------------------------------------------------- */
+];
+
+/* ============================================================================
+   BELOW THIS LINE IS THE RENDERING ENGINE.
+   You normally never need to edit it — just update `menuData` above.
+   ============================================================================ */
+
+(function () {
+  'use strict';
+
+  /* --------------------------------------------------------------
+     1. RENDER THE MENU (tabs + cards) FROM menuData
+     -------------------------------------------------------------- */
+  const tabsEl   = document.getElementById('menuTabs');
+  const panelsEl = document.getElementById('menuPanels');
+
+  /**
+   * Build one menu card element for a single item.
+   * @param {{name:string, price:string, desc?:string}} item
+   * @returns {HTMLElement}
+   */
+  function createMenuCard(item) {
+    const card = document.createElement('article');
+    card.className = 'menu-card';
+
+    const top = document.createElement('div');
+    top.className = 'menu-card-top';
+
+    const name = document.createElement('h4');
+    name.className = 'item-name';
+    name.textContent = item.name;
+
+    const dots = document.createElement('span');
+    dots.className = 'dots';
+    dots.setAttribute('aria-hidden', 'true');
+
+    const price = document.createElement('span');
+    // Prices that aren't a £ figure (e.g. "Daily") get a distinct badge style
+    const isNumericPrice = /^£/.test(item.price);
+    price.className = 'item-price' + (isNumericPrice ? '' : ' is-daily');
+    price.textContent = item.price;
+
+    top.append(name, dots, price);
+    card.appendChild(top);
+
+    if (item.desc) {
+      const desc = document.createElement('p');
+      desc.className = 'item-desc';
+      desc.textContent = item.desc;
+      card.appendChild(desc);
+    }
+
+    return card;
+  }
+
+  /**
+   * Build a full category panel (heading + grid of cards).
+   * @param {object} category
+   * @returns {HTMLElement}
+   */
+  function createPanel(category) {
+    const panel = document.createElement('div');
+    panel.className = 'menu-panel';
+    panel.id = 'panel-' + category.id;
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', 'tab-' + category.id);
+
+    const head = document.createElement('div');
+    head.className = 'panel-head';
+
+    const h3 = document.createElement('h3');
+    h3.textContent = category.label;
+
+    const en = document.createElement('span');
+    en.className = 'panel-en';
+    en.textContent = category.subtitle;
+
+    const count = document.createElement('span');
+    count.className = 'panel-count';
+    count.textContent = category.items.length +
+      (category.items.length === 1 ? ' item' : ' items');
+
+    head.append(h3, en, count);
+    panel.appendChild(head);
+
+    const grid = document.createElement('div');
+    grid.className = 'menu-grid';
+    category.items.forEach(function (item) {
+      grid.appendChild(createMenuCard(item));
+    });
+    panel.appendChild(grid);
+
+    return panel;
+  }
+
+  /**
+   * Build one tab button for a category.
+   * @param {object} category
+   * @param {boolean} isActive
+   * @returns {HTMLElement}
+   */
+  function createTab(category, isActive) {
+    const tab = document.createElement('button');
+    tab.type = 'button';
+    tab.className = 'tab' + (isActive ? ' is-active' : '');
+    tab.id = 'tab-' + category.id;
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-controls', 'panel-' + category.id);
+    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    tab.tabIndex = isActive ? 0 : -1;
+
+    const pt = document.createElement('span');
+    pt.className = 'tab-pt';
+    pt.textContent = category.label;
+
+    const en = document.createElement('span');
+    en.className = 'tab-en';
+    en.textContent = category.subtitle;
+
+    tab.append(pt, en);
+    return tab;
+  }
+
+  /** Render everything and wire up the tab behaviour. */
+  function renderMenu() {
+    if (!tabsEl || !panelsEl) return;
+
+    tabsEl.innerHTML = '';
+    panelsEl.innerHTML = '';
+
+    menuData.forEach(function (category, index) {
+      const isActive = index === 0;
+      tabsEl.appendChild(createTab(category, isActive));
+      const panel = createPanel(category);
+      if (isActive) panel.classList.add('is-active');
+      panelsEl.appendChild(panel);
+    });
+
+    setupTabs();
+  }
+
+  /* --------------------------------------------------------------
+     2. TAB BEHAVIOUR (click + keyboard arrows)
+     -------------------------------------------------------------- */
+  function setupTabs() {
+    const tabs = Array.prototype.slice.call(tabsEl.querySelectorAll('.tab'));
+
+    function activateTab(tab) {
+      tabs.forEach(function (t) {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+        t.tabIndex = -1;
+      });
+      panelsEl.querySelectorAll('.menu-panel').forEach(function (p) {
+        p.classList.remove('is-active');
+      });
+
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      tab.tabIndex = 0;
+
+      const panel = document.getElementById(tab.getAttribute('aria-controls'));
+      if (panel) panel.classList.add('is-active');
+
+      // Keep the active tab visible when the tab bar scrolls horizontally
+      if (tab.scrollIntoView) {
+        tab.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+      }
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { activateTab(tab); });
+
+      tab.addEventListener('keydown', function (e) {
+        let next = null;
+        if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+        if (e.key === 'ArrowLeft')  next = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (e.key === 'Home')       next = tabs[0];
+        if (e.key === 'End')        next = tabs[tabs.length - 1];
+        if (next) {
+          e.preventDefault();
+          activateTab(next);
+          next.focus();
+        }
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------
+     3. STICKY NAV SHADOW
+     -------------------------------------------------------------- */
+  const nav = document.getElementById('nav');
+  function handleScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  }
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  /* --------------------------------------------------------------
+     4. MOBILE MENU
+     -------------------------------------------------------------- */
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+
+  burger.addEventListener('click', function () {
+    const open = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+
+  /* --------------------------------------------------------------
+     5. SCROLL REVEAL
+     -------------------------------------------------------------- */
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(function (el) { observer.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* --------------------------------------------------------------
+     6. HIGHLIGHT TODAY'S OPENING HOURS
+     -------------------------------------------------------------- */
+  const jsDay = new Date().getDay();           // 0 = Sunday
+  const todayIndex = jsDay === 0 ? 7 : jsDay;  // 1 = Monday ... 7 = Sunday
+
+  document.querySelectorAll('.hours-list li').forEach(function (li) {
+    if (Number(li.dataset.day) === todayIndex) li.classList.add('today');
+  });
+
+  /* --------------------------------------------------------------
+     7. LIVE "OPEN NOW" BADGE
+     --------------------------------------------------------------
+     Keep this schedule in sync with the visible hours list above.
+     Times are in 24h decimal (e.g. 22.5 = 22:30).
+     -------------------------------------------------------------- */
+  const SCHEDULE = {
+    0: [9, 16],   // Sunday
+    1: [8, 22],   // Monday
+    2: [8, 22],   // Tuesday
+    3: [8, 22],   // Wednesday
+    4: [8, 22],   // Thursday
+    5: [8, 23],   // Friday
+    6: [8, 23]    // Saturday
+  };
+
+  const statusEl = document.getElementById('openStatus');
+  const statusText = document.getElementById('openStatusText');
+
+  if (statusEl && statusText) {
+    const now = new Date();
+    const hoursNow = now.getHours() + now.getMinutes() / 60;
+    const today = SCHEDULE[now.getDay()];
+    const isOpen = today && hoursNow >= today[0] && hoursNow < today[1];
+
+    if (isOpen) {
+      statusText.textContent = 'Open now · until ' + today[1] + ':00';
+    } else {
+      statusEl.classList.add('closed');
+      statusText.textContent = 'Closed · opens at ' + (today ? today[0] : 8) + ':00';
+    }
+  }
+
+  /* --------------------------------------------------------------
+     8. ACTIVE NAV LINK HIGHLIGHTING
+     -------------------------------------------------------------- */
+  const sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+  const navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+
+  function updateActiveLink() {
+    const pos = window.scrollY + 140;
+    let current = '';
+    sections.forEach(function (section) {
+      if (section.offsetTop <= pos) current = section.id;
+    });
+    navLinks.forEach(function (link) {
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + current);
+    });
+  }
+  updateActiveLink();
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+  /* --------------------------------------------------------------
+     9. FOOTER YEAR
+     -------------------------------------------------------------- */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* --------------------------------------------------------------
+     10. GO — build the menu
+     -------------------------------------------------------------- */
+  renderMenu();
+
+  /* --------------------------------------------------------------
+     BONUS — console helper for quick price edits.
+     Open DevTools and run, for example:
+         O_CABAZ.updatePrice('Bitoque', '£12.00')
+         O_CABAZ.addItem('carne', { name:'Novo Prato', price:'£9.50', desc:'...' })
+         O_CABAZ.getMenu()
+     -------------------------------------------------------------- */
+  window.O_CABAZ = {
+    /** Return the raw menu data (a live reference). */
+    getMenu: function () { return menuData; },
+
+    /** Change an item's price by name. */
+    updatePrice: function (itemName, newPrice) {
+      let found = false;
+      menuData.forEach(function (cat) {
+        cat.items.forEach(function (item) {
+          if (item.name === itemName) { item.price = newPrice; found = true; }
+        });
+      });
+      if (found) renderMenu();
+      return found;
+    },
+
+    /** Add an item to a category by its `id`. */
+    addItem: function (categoryId, item) {
+      const cat = menuData.find(function (c) { return c.id === categoryId; });
+      if (!cat) return false;
+      cat.items.push(item);
+      renderMenu();
+      return true;
+    },
+
+    /** Remove an item by name. */
+    removeItem: function (itemName) {
+      menuData.forEach(function (cat) {
+        cat.items = cat.items.filter(function (i) { return i.name !== itemName; });
+      });
+      renderMenu();
+      return true;
+    }
+  };
+
+})();
+</script>
+
+</body>
+</html>
